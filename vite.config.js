@@ -10,7 +10,7 @@ export default defineConfig({
     vue(),
     vueDevTools(),
   ],
-  base: '/food-frontend/',
+  base: '/foodsys/',
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
