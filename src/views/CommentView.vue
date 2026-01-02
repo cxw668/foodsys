@@ -67,9 +67,11 @@ import HomeRightPanel from '../components/HomeRightPanel.vue'
 import { ElMessage } from 'element-plus'
 import { ChatDotRound, Star } from '@element-plus/icons-vue'
 
+const baseUrl = import.meta.env.BASE_URL
+
 const usersImage = (index) => {
-  if (index >= 3) return '/images/avatar.png'
-  return '/images/users/用户头像 (' + index + ').png'
+  if (index >= 3) return baseUrl + 'images/avatar.png'
+  return baseUrl + 'images/users/用户头像 (' + index + ').png'
 }
 
 const newComment = ref('')

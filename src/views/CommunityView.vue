@@ -146,6 +146,8 @@ import { Star, ChatDotRound, Share, Delete, StarFilled } from '@element-plus/ico
 import { ref, reactive, onMounted } from 'vue'
 import { ElMessage, ElMessageBox } from 'element-plus'
 
+const baseUrl = import.meta.env.BASE_URL
+
 const newPostDialogVisible = ref(false)
 const newPostForm = reactive({
   text: '',
@@ -351,7 +353,7 @@ const handleShare = (post) => {
 const getImages = (index) => {
   // Cycle through 1-10 images for indices > 10
   const imageIndex = (index - 1) % 10 + 1
-  return `/images/community/社区分享图片 (${imageIndex}).png`
+  return `${baseUrl}images/community/社区分享图片 (${imageIndex}).png`
 }
 
 // 处理新建帖子

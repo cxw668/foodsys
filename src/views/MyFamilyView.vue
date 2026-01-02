@@ -85,6 +85,8 @@ import HomeRightPanel from '../components/HomeRightPanel.vue'
 import { ref, reactive, onMounted, nextTick } from 'vue'
 import * as echarts from 'echarts'
 
+const baseUrl = import.meta.env.BASE_URL
+
 const showAddMemberModal = ref(false)
 const chartRef = ref(null)
 let chartInstance = null
@@ -93,7 +95,7 @@ const members = ref([
   {
     name: 'Me',
     role: 'Admin',
-    avatar: '/images/avatar.png',
+    avatar: baseUrl + 'images/avatar.png',
     glucose: 5.4,
     meals: 21
   },
@@ -111,6 +113,11 @@ const loadMembers = () => {
   if (storedMembers) {
     members.value = JSON.parse(storedMembers)
   }
+  members.value = members.value.map(m => {
+    if (!m.avatar) return m
+    if (m.avatar.startsWith('/images/')) return { ...m, avatar: baseUrl + m.avatar.slice(1) }
+    return m
+  })
   // Ensure default stats if missing
   members.value.forEach(m => {
     if (m.glucose === undefined) m.glucose = (5 + Math.random()).toFixed(1)

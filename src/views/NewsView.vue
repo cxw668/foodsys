@@ -41,6 +41,8 @@ import HomeSidebar from '../components/HomeSidebar.vue'
 import HomeRightPanel from '../components/HomeRightPanel.vue'
 import { ref } from 'vue'
 
+const baseUrl = import.meta.env.BASE_URL
+
 // 创建10条新闻数据
 const newsList = ref([
   {
@@ -51,7 +53,7 @@ const newsList = ref([
     date: "Dec 28, 2025",
     readTime: "5 min read",
     imageColor: "#a7f3d0", // 浅绿色
-    image: "/images/news/营养.png"
+    image: baseUrl + "images/news/营养.png"
   },
   {
     id: 2,
@@ -61,7 +63,7 @@ const newsList = ref([
     date: "Dec 26, 2025",
     readTime: "4 min read",
     imageColor: "#fef3c7", // 浅黄色
-    image: "/images/news/运动.png"
+    image: baseUrl + "images/news/运动.png"
   },
   {
     id: 3,
@@ -71,7 +73,7 @@ const newsList = ref([
     date: "Dec 24, 2025",
     readTime: "7 min read",
     imageColor: "#fecaca", // 浅红色
-    image: "/images/news/健康饮食.png"
+    image: baseUrl + "images/news/健康饮食.png"
   },
   {
     id: 4,
@@ -81,7 +83,7 @@ const newsList = ref([
     date: "Dec 22, 2025",
     readTime: "6 min read",
     imageColor: "#dbeafe", // 浅蓝色
-    image: "/images/news/精神.png"
+    image: baseUrl + "images/news/精神.png"
   },
   {
     id: 5,
@@ -91,7 +93,7 @@ const newsList = ref([
     date: "Dec 20, 2025",
     readTime: "8 min read",
     imageColor: "#e9d5ff", // 浅紫色
-    image: "/images/news/science.png"
+    image: baseUrl + "images/news/science.png"
   },
   {
     id: 6,
@@ -101,7 +103,7 @@ const newsList = ref([
     date: "Dec 18, 2025",
     readTime: "5 min read",
     imageColor: "#bbf7d0", // 浅绿色
-    image: "/images/news/转化.png"
+    image: baseUrl + "images/news/转化.png"
   },
   {
     id: 7,
@@ -111,7 +113,7 @@ const newsList = ref([
     date: "Dec 16, 2025",
     readTime: "9 min read",
     imageColor: "#fbcfe8", // 浅粉色
-    image: "/images/news/科技.png"
+    image: baseUrl + "images/news/科技.png"
   },
   {
     id: 8,
@@ -121,7 +123,7 @@ const newsList = ref([
     date: "Dec 14, 2025",
     readTime: "7 min read",
     imageColor: "#fed7aa", // 浅橙色
-    image: "/images/news/营养均衡.png"
+    image: baseUrl + "images/news/营养均衡.png"
   },
   {
     id: 9,
@@ -131,7 +133,7 @@ const newsList = ref([
     date: "Dec 12, 2025",
     readTime: "6 min read",
     imageColor: "#c7d2fe", // 浅靛蓝色
-    image: "/images/news/健康提示.png"
+    image: baseUrl + "images/news/健康提示.png"
   },
   {
     id: 10,
@@ -141,7 +143,7 @@ const newsList = ref([
     date: "Dec 10, 2025",
     readTime: "8 min read",
     imageColor: "#fde68a", // 浅琥珀色
-    image: "/images/news/trends.png"
+    image: baseUrl + "images/news/trends.png"
   }
 ])
 </script>

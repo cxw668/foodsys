@@ -3,7 +3,7 @@
     <!-- User Profile -->
     <div class="user-profile">
       <div class="user-info">
-        <el-avatar :size="40" src="/images/avatar.png" />
+        <el-avatar :size="40" :src="baseUrl + 'images/avatar.png'" />
         <span class="username">Kim's home</span>
       </div>
       <div class="user-actions">
@@ -19,7 +19,7 @@
     <!-- Share Grid -->
     <div class="section-title">Share</div>
     <div class="share-grid">
-      <div class="share-item" v-for="image in shareImages" :key="i">
+      <div class="share-item" v-for="(image, i) in shareImages" :key="image">
         <el-image 
           :src="image" 
           fit="cover" 
@@ -41,13 +41,15 @@ import { ref, onMounted } from 'vue'
 import { ChatDotRound, Bell, Picture } from '@element-plus/icons-vue'
 import * as echarts from 'echarts'
 
+const baseUrl = import.meta.env.BASE_URL
+
 const overviewChartRef = ref(null)
 
 const shareImages = [
-  '/images/营养搭配图片生成 (1).png',
-  '/images/营养搭配图片生成 (2).png',
-  '/images/营养搭配图片生成 (3).png',
-  '/images/营养搭配图片生成 (4).png'
+  baseUrl + 'images/营养搭配图片生成 (1).png',
+  baseUrl + 'images/营养搭配图片生成 (2).png',
+  baseUrl + 'images/营养搭配图片生成 (3).png',
+  baseUrl + 'images/营养搭配图片生成 (4).png'
 ]
 
 onMounted(() => {

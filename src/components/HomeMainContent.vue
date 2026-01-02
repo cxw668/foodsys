@@ -137,6 +137,8 @@ import { ElMessage } from 'element-plus'
 import { usePantryStore } from '@/stores/pantryStore'
 import { PRODUCTS } from '@/mock/products.js'
 
+const baseUrl = import.meta.env.BASE_URL
+
 const currentDate = ref(new Date())
 // State
 const isScanning = ref(false)
@@ -268,9 +270,9 @@ const initChart = () => {
 // 这里存储了14张图片序号，从1到10
 const getImages = (i) => {
   if (i > 13) {
-    return `/images/dishes/dish (${i%13}).png`
+    return `${baseUrl}images/dishes/dish (${i % 13}).png`
   } 
-  return `/images/dishes/dish (${i}).png`
+  return `${baseUrl}images/dishes/dish (${i}).png`
 }
 
 // Week days
