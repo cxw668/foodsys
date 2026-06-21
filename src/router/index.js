@@ -10,7 +10,7 @@ import CommentView from '@/views/CommentView.vue'
 import MyFamilyView from '@/views/MyFamilyView.vue'
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHistory('/foodsys/'),
   routes: [
     { path: '/', redirect: '/home' },
     { path: '/home', component: HomeView },
@@ -21,7 +21,7 @@ const router = createRouter({
     { path: '/news', component: NewsView },
     { path: '/search', component: SearchView },
     { path: '/comment', component: CommentView },
-    { path: '/family', component: MyFamilyView }
+    { path: '/family', component: MyFamilyView },
   ],
 })
 
