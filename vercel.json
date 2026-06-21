@@ -1,6 +1,6 @@
 {
   "rewrites": [
-    { "source": "/foodsys/(.*)", "destination": "/foodsys/index.html" }
+    { "source": "/(.*)", "destination": "/index.html" }
   ],
   "trailingSlash": false
 }
